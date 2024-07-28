@@ -2,6 +2,7 @@ package com.example.checkboxestest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btnOrder = findViewById(R.id.btnOrder);
-        TextView orderCheck = findViewById(R.id.orderCheck);
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 if (fresh.isChecked()) {resultOrder += ", fresh salad";}
                 if (milk.isChecked()) {resultOrder += ", milky salad";}
 
-                orderCheck.setText(resultOrder );
+                Intent orderActivity = new Intent(getApplicationContext(),OrderCheckActivity.class);
+                orderActivity.putExtra("order", resultOrder);
+                startActivity(orderActivity);
             }
         });
     }

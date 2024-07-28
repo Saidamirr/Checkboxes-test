@@ -104,24 +104,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbFresh" />
 
-    <TextView
-        android:id="@+id/orderCheckLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You ordered:"
-        android:textColor="#9A1643"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOrder" />
-
-    <TextView
-        android:id="@+id/orderCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orderCheckLabel" />
-
     <Button
         android:id="@+id/btnOrder"
         android:layout_width="wrap_content"
